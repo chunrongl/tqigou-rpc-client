@@ -1,0 +1,32 @@
+{
+    "name": "chunrongl/tqigou-rpc-client",
+    "description": "淘气购-laravel5.7-hprose2.0-client",
+    "type": "library",
+    "require": {
+        "php": ">=7.2.0",
+        "hprose/hprose": "v2.0.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chunrongl",
+            "email": "chunrongl12@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Chunrongl\\TqigouRpcClient\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chunrongl\\TqigouRpcClient\\ClientProvider"
+            ],
+            "aliases": {
+                "TqigouText": "Chunrongl\\TqigouRpcClient\\Facades\\RpcText"
+            }
+        }
+    }
+}
