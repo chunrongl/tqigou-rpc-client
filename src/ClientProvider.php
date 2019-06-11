@@ -18,6 +18,11 @@ class ClientProvider extends ServiceProvider
         $this->publishes([$configPath => $publishPath], 'config');
     }
 
+    /**
+     * 在容器中注册绑定
+     *
+     * @return void
+     */
     public function register()
     {
         $configPath = __DIR__ . 'Config/tqigou-rpc-service.php';
