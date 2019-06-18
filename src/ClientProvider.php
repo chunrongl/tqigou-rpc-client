@@ -25,7 +25,11 @@ class ClientProvider extends ServiceProvider
      */
     public function register()
     {
-        $configPath = __DIR__ . 'Config/tqigou-rpc-service.php';
+        $configPath = __DIR__ . '/Config/tqigou-rpc-service.php';
         $this->mergeConfigFrom($configPath, 'tqigou-rpc-service');
+
+        $this->app->singleton('tqigou.rpc.text', function ($app) {
+            return new Text();
+        });
     }
 }
