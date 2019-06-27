@@ -2,6 +2,6 @@
 
 return array(
     'TqigouCommon'=>array(
-        'uri'=>'tcp://127.0.0.1:9502'
+        'uri'=>env('TQIGOU_COMMON_CONNECTION_URI','tcp://127.0.0.1:1122')
     ),
 );
