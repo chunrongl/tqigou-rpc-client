@@ -24,7 +24,9 @@ class Text
 
         $uri = $config['uri'];
 
-        $server = HpClient::create($uri, $isAsync);
+        $realUri='tcp://'.ltrim($uri,'tcp://');
+
+        $server = HpClient::create($realUri, $isAsync);
 
         return $server;
     }
