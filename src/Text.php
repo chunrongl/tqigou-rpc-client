@@ -22,13 +22,9 @@ class Text
             throw new InvalidConfigException('配置非法');
         }
 
-        $uris = $config['uri'];
+        $uri = $config['uri'];
 
-        foreach ($uris as $k => $uri){
-            $uris[$k]='tcp://'.ltrim($uri,'tcp://');
-        }
-
-        $server = HpClient::create($uris, $isAsync);
+        $server = HpClient::create($uri, $isAsync);
 
         return $server;
     }
